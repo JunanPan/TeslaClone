@@ -3,21 +3,23 @@ import {View,Text,ImageBackground} from 'react-native';
 import styles from './styles'
 import ButtonItem from '../ButtonItem';
 const CarItem= (props)=>{
+    const {name,tagline,image}=props;
     return(
     <View style={styles.carContainer}>
       <ImageBackground 
-      source={require('../../assets/images/ModelX.jpeg')}
+      source={image}
       style={styles.image}
       />
 
 
 
       <View style={styles.titles}>
-        <Text style={styles.title}>Model S</Text>
-        <Text style={styles.subtitle}>Starting at $69,420</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.subtitle}>{tagline}</Text>
       </View>
 
-      <ButtonItem 
+      <View style={styles.buttonContainer}>
+        <ButtonItem 
       type='primary'
       content = {"Custom Order"}
       onPress={()=>{
@@ -31,6 +33,8 @@ const CarItem= (props)=>{
         console.warn("CExisting Inventory was pressed")
       }}
       />
+      </View>
+      
       </View>
     );
 };
