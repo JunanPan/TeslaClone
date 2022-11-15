@@ -8,7 +8,8 @@ export default function App() {
 
       <CarItem 
       name={"Model X"} 
-      tagline={"Starting from $99,500"}
+      tagline={"Order Online For"}
+      taglineCTA={"Touchless Delivery"}
       image={require('./assets/images/ModelX.jpeg')}
       />
       
